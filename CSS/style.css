@@ -1,0 +1,1929 @@
+/***********************
+GAEL DELESCLUSE
+Project : Booki
+************************ 
+OPenClassRooms
+
+
+Special thanks to Laura Branigan for the best song ever "Gloria"
+************************/
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/*
+####################################################################################
+####################################################################################
+##########################---Regular screen---#######################################
+####################################################################################
+####################################################################################
+*/
+
+@media screen and (min-width: 992px) {
+  /*Syntaxe générale*/
+  * {
+    box-sizing: border-box;
+    margin-left: 0px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .marginLeft {
+    margin-left: 40px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  li {
+    list-style-position: inside;
+  }
+
+  .bolder {
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    padding-left: 0px;
+  }
+
+  .colorBlack {
+    color: black;
+  }
+
+  section {
+    background-color: white;
+    width: 992px;
+    padding-left: 0px;
+  }
+
+  h1 {
+    font-size: 120%;
+    margin-left: 0px;
+  }
+
+  h2 {
+    font-size: 120%;
+    margin: 0px;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 13px;
+    padding: 7px;
+    margin: 0px;
+  }
+
+  p {
+    font-size: 85%;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  .shadow {
+    box-shadow: 1px 1px 7px #b9b5b5;
+  }
+
+  .boxSize {
+    width: 1050px;
+  }
+
+  /*Icons syntaxe - START*/
+
+  .blueStar {
+    color: #0065fc;
+  }
+
+  .greyStar {
+    color: #d4d1d1;
+  }
+
+  .blueMoney {
+    background-color: #deebff;
+    color: #0065fc;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0px;
+    padding-top: 12px;
+    padding-left: 10px;
+  }
+
+  .blueChild {
+    background-color: #deebff;
+    color: #0065fc;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0px;
+    padding-top: 12px;
+    padding-left: 14px;
+  }
+
+  .blueHeart {
+    background-color: #deebff;
+    color: #0065fc;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0px;
+    padding-top: 12px;
+    padding-left: 12px;
+  }
+
+  .blueDog {
+    background-color: #deebff;
+    color: #0065fc;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0px;
+    padding-top: 11px;
+    padding-left: 12px;
+  }
+
+  .infoCircle {
+    color: #0065fc;
+    padding-left: 7px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #deebff;
+    margin-right: 10px;
+    border-radius: 15px;
+    background-color: white;
+  }
+
+  .greyMap {
+    background-color: #f1f4f4;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px 0 0 10px;
+    padding-top: 12px;
+    padding-left: 14px;
+  }
+
+  .blueSearch {
+    display: none !important;
+  }
+
+  /*Icons syntaxe - END*/
+
+  /*Header syntaxe - START*/
+
+  #flexHeader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%x;
+    height: 75px;
+  }
+
+  .logoBooki {
+    width: 70px;
+    height: 30px;
+  }
+
+  #flexNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin-right: 30px;
+    margin-top: 1px;
+  }
+
+  .flexLink {
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+  }
+
+  .linkPage {
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-left: 25px;
+    padding-bottom: 30px;
+    border-top: 3px solid #0065fc;
+    color: #0065fc;
+  }
+
+  .colorLink {
+    color: #414141;
+    font-size: 13px;
+  }
+
+  /*Header syntaxe - END*/
+
+  /*Formulaire syntaxe - START*/
+
+  input[type="submit"] {
+    width: 120px;
+    height: 40px;
+    color: white;
+    background-color: #0065fc;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    font-size: 15px;
+    padding-left: 0px;
+  }
+
+  input[type="search"] {
+    width: 210px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px;
+    background-color: white;
+    border: none;
+    color: black;
+    font: bold;
+    font-size: 15px;
+    border: 1px solid #f2f2f2;
+  }
+
+  form[method="post"] {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    width: 450px;
+    border: none;
+  }
+
+  input::placeholder {
+    color: black;
+    font: bold;
+    font-size: 15px;
+  }
+
+  /*Formulaire syntaxe - END*/
+
+  /*Filters syntaxe - START*/
+
+  .flexFilters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    margin-top: 8px;
+  }
+
+  .filterSpace {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+    margin: 10px;
+    border: 0.1px solid #deebff;
+    border-radius: 20px;
+  }
+
+  .filterSpace:hover {
+    background-color: #deebff;
+    box-shadow: 1px 1px 7px #b9b5b5;
+  }
+
+  .spacing {
+    padding-right: 20px;
+    padding-left: 10px;
+    color: black;
+  }
+
+  /*Filters syntaxe - END*/
+
+  /*Informations syntaxe - START*/
+
+  .flexInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    font-size: 85%;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-top: 15px;
+  }
+
+  /*Informations syntaxe - END*/
+
+  /*Accomodations syntaxe - START*/
+
+  #accommodations {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 20px;
+    padding: 0px;
+    width: 1000px;
+    background-color: white;
+  }
+
+  #classicHosting {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 20px;
+    height: 550px;
+    width: 692px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: baseline;
+    align-content: flex-start;
+  }
+
+  .rowHosting {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+
+  .boxHosting {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: flex-start;
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    width: 200px;
+    height: 170px;
+    color: black;
+  }
+
+  .boxPicture {
+    width: 100%;
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+  }
+
+  .textHosting {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding-left: 0px;
+  }
+
+  .textPrice {
+    font-size: 12px;
+    padding-left: 7px;
+  }
+
+  .rating {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    padding-left: 7px;
+    padding-top: 7px;
+  }
+
+  /*###########################################################################*/
+
+  #famousHosting {
+    background-color: #f2f2f2;
+    padding: 0px;
+    border-radius: 20px;
+    height: 550px;
+    width: 300px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: center;
+  }
+
+  #famousTitle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-left: 0px;
+    padding-left: 35px;
+    padding-right: 20px;
+    padding-top: 30px;
+    width: 100%;
+  }
+
+  .boxFamous {
+    background-color: white;
+    width: 260px;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    border-radius: 15px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 30px;
+    color: black;
+  }
+
+  .famousPicture {
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+    width: 100px;
+    border-radius: 12px 0 0 12px;
+    object-fit: cover;
+  }
+
+  .textFamous {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+
+  /*Accomodations syntaxe - END*/
+
+  /*Activity syntaxe - START*/
+
+  #activity {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    width: 1000px;
+    height: 100%;
+  }
+
+  #activityOrientation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0px;
+  }
+
+  .rowActivity {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .boxActivity {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: flex-start;
+    border-radius: 15px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-right: 50px;
+    width: 225px;
+    height: 320px;
+    color: black;
+    margin-right: 35px;
+  }
+
+  .regularPictureSize {
+    width: 100%;
+    height: 280px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+  }
+
+  .mediumPictureSize {
+    width: 100%;
+    height: 120px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+  }
+
+  .smallPictureSize {
+    width: 100%;
+    height: 90px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .mediumBoxActivity {
+    background-color: white;
+    width: 100%;
+    height: 160px;
+    border-radius: 15px;
+    color: black;
+  }
+
+  .smallBoxActivity {
+    background-color: white;
+    width: 100%;
+    height: 135px;
+    border-radius: 15px;
+    color: black;
+  }
+
+  .columnReverse {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .padding {
+    padding-bottom: 15px;
+  }
+
+  /*Activity syntaxe - END*/
+
+  /*Footer syntaxe - START*/
+
+  footer {
+    background-color: #f2f2f2;
+    height: 200px;
+    width: 1100;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    margin-top: 50px;
+    padding-left: 30px;
+  }
+
+  .footerBox {
+    width: 300px;
+    height: 160px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .footerPadding {
+    padding-top: 10px;
+    font-size: 13px;
+  }
+
+  /*Footer syntaxe - END*/
+}
+/*
+####################################################################################
+####################################################################################
+##########################---Medium screen---#######################################
+####################################################################################
+####################################################################################
+*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  * {
+    box-sizing: border-box;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .marginLeft {
+    margin-left: 50px;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .bolder {
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    padding-left: 0px;
+  }
+
+  .colorBlack {
+    color: black;
+  }
+  section {
+    background-color: white;
+    width: 768px;
+    padding-left: 20px;
+  }
+
+  h1 {
+    font-size: 120%;
+    margin-left: 0px;
+  }
+
+  h2 {
+    font-size: 100%;
+    margin: 0px;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 13px;
+    padding: 7px;
+    margin: 0px;
+  }
+
+  p {
+    font-size: 85%;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  .shadow {
+    box-shadow: 1px 1px 7px #b9b5b5;
+  }
+
+  /*Icons syntaxe - START*/
+
+  .blueStar {
+    color: #0065fc;
+  }
+
+  .greyStar {
+    color: #d4d1d1;
+  }
+
+  .blueMoney {
+    background-color: #deebff;
+    color: #0065fc;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0px;
+    padding-top: 12px;
+    padding-left: 10px;
+  }
+
+  .blueChild {
+    background-color: #deebff;
+    color: #0065fc;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0px;
+    padding-top: 12px;
+    padding-left: 14px;
+  }
+
+  .blueHeart {
+    background-color: #deebff;
+    color: #0065fc;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0px;
+    padding-top: 12px;
+    padding-left: 13px;
+  }
+
+  .blueDog {
+    background-color: #deebff;
+    color: #0065fc;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0px;
+    padding-top: 11px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .infoCircle {
+    color: #0065fc;
+    padding-left: 7px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #deebff;
+    margin-right: 10px;
+    border-radius: 15px;
+    background-color: white;
+  }
+
+  .greyMap {
+    background-color: #f1f4f4;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px 0 0 10px;
+    padding-top: 12px;
+    padding-left: 14px;
+  }
+
+  .blueSearch {
+    display: none !important;
+  }
+
+  /*Icons syntaxe - END*/
+
+  /*Header syntaxe - START*/
+  #flexHeader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-top: 11px;
+    margin-left: 0px;
+    margin-right: 20px;
+    width: 100%;
+    height: 75px;
+  }
+
+  .logoBooki {
+    width: 70px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #flexNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin-right: 30px;
+  }
+
+  .flexLink {
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+  }
+
+  .linkPage {
+    padding-top: 32px;
+    padding-right: 20px;
+    padding-left: 25px;
+    padding-bottom: 30px;
+    border-top: 3px solid #0065fc;
+    color: #0065fc;
+  }
+
+  .colorLink {
+    color: #414141 !important;
+    font-size: 13px;
+  }
+
+  /*Header syntaxe - END*/
+
+  /*Formulaire syntaxe - START*/
+
+  input[type="submit"] {
+    width: 120px;
+    height: 40px;
+    color: white;
+    background-color: #0065fc;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    font-size: 15px;
+    padding-left: 0px;
+  }
+
+  input[type="search"] {
+    width: 210px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px;
+    background-color: white;
+    border: none;
+    color: black;
+    font: bold;
+    font-size: 15px;
+  }
+
+  form[method="post"] {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    width: 450px;
+    border: none;
+  }
+
+  input::placeholder {
+    color: black;
+    font: bold;
+    font-size: 15px;
+  }
+
+  /*Formulaire syntaxe - END*/
+
+  /*Filters syntaxe - START*/
+
+  .flexFilters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+  }
+
+  .filterSpace {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+    margin: 10px;
+    border: 0.1px solid #deebff;
+    border-radius: 20px;
+  }
+
+  .filterSpace:hover {
+    background-color: #deebff;
+    box-shadow: 1px 1px 7px #b9b5b5;
+  }
+
+  .spacing {
+    padding-right: 20px;
+    padding-left: 10px;
+    color: black;
+  }
+
+  .paddingTop {
+    padding-top: 0px;
+  }
+
+  /*Filters syntaxe - END*/
+
+  /*Informations syntaxe - START*/
+
+  .flexInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    font-size: 85%;
+    margin-left: 10px;
+  }
+
+  /*Informations syntaxe - END*/
+
+  /*Accomodations syntaxe - START*/
+
+  #accommodations {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 20px;
+    padding: 0px;
+    width: 768px;
+  }
+
+  #classicHosting {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 20px;
+    height: 550px;
+    width: 730px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: baseline;
+    align-content: flex-start;
+  }
+
+  .rowHosting {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+
+  .boxHosting {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: flex-start;
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    width: 200px;
+    height: 170px;
+    color: black;
+  }
+
+  .boxPicture {
+    width: 100%;
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+  }
+
+  .textHosting {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding-left: 0px;
+  }
+
+  .textPrice {
+    font-size: 12px;
+    padding-left: 7px;
+  }
+
+  .rating {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    padding-left: 7px;
+    padding-top: 7px;
+  }
+
+  /*###########################################################################*/
+
+  #famousHosting {
+    background-color: #f2f2f2;
+    padding: 0px;
+    border-radius: 20px;
+    height: 200px;
+    width: 730px;
+    margin-left: 0px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: center;
+  }
+
+  #famousTitle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-left: 0px;
+    margin-bottom: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 7px;
+    width: 100%;
+  }
+
+  .boxFamous {
+    background-color: white;
+    width: 210px;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    border-radius: 15px;
+    color: black;
+  }
+
+  .famousPicture {
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+    width: 90px;
+    border-radius: 12px 0 0 12px;
+    object-fit: cover;
+  }
+
+  .textFamous {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+
+  .tabletPlacement {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0px;
+  }
+
+  /*Accomodations syntaxe - END*/
+
+  /*Activity syntaxe - START*/
+
+  #activity {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    width: 730px;
+    height: 100%;
+  }
+
+  #activityOrientation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .rowActivity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 460px;
+  }
+
+  .boxActivity {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: flex-start;
+    border-radius: 15px;
+    padding: 0px;
+    margin-top: 0px;
+    width: 215px;
+    height: 320px;
+    color: black;
+  }
+
+  .regularPictureSize {
+    width: 100%;
+    height: 280px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+  }
+
+  .mediumPictureSize {
+    width: 100%;
+    height: 120px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+  }
+
+  .smallPictureSize {
+    width: 100%;
+    height: 90px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .mediumBoxActivity {
+    background-color: white;
+    width: 100%;
+    height: 160px;
+    border-radius: 15px;
+    color: black;
+  }
+
+  .smallBoxActivity {
+    background-color: white;
+    width: 100%;
+    height: 135px;
+    border-radius: 15px;
+    color: black;
+  }
+
+  .rowReverse {
+    flex-direction: row-reverse;
+  }
+
+  .columnReverse {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .padding {
+    padding-bottom: 15px;
+  }
+
+  /*Activity syntaxe - END*/
+
+  /*Footer syntaxe - START*/
+
+  footer {
+    background-color: #f2f2f2;
+    height: 100%;
+    width: 968px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    margin-top: 50px;
+    padding-left: 30px;
+  }
+
+  .footerBox {
+    width: 300px;
+    height: 160px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .footerPadding {
+    padding-top: 10px;
+    font-size: 13px;
+  }
+
+  /*Footer syntaxe - END*/
+}
+
+/*
+####################################################################################
+####################################################################################
+##########################---Small screen---#######################################
+####################################################################################
+####################################################################################
+*/
+
+@media screen and (max-width: 767px) {
+  * {
+    box-sizing: border-box;
+    margin-left: 0px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .marginLeft {
+    margin-left: 20px;
+  }
+
+  .bolder {
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    padding-left: 0px;
+  }
+
+  .colorBlack {
+    color: black;
+  }
+
+  section {
+    background-color: white;
+    width: 375px;
+    padding-left: 20px;
+  }
+
+  h1 {
+    font-size: 180%;
+    margin-left: 0px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 140%;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 13px;
+    padding: 7px;
+    margin: 0px;
+  }
+
+  p {
+    font-size: 130%;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  .marginForm {
+    margin-left: 10px;
+  }
+
+  .shadow {
+    box-shadow: 1px 1px 7px #b9b5b5;
+  }
+
+  /*Icons syntaxe - START*/
+
+  .blueStar {
+    color: #0065fc;
+  }
+
+  .greyStar {
+    color: #d4d1d1;
+  }
+
+  .blueMoney {
+    background-color: #deebff;
+    color: #0065fc;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 0px;
+    font-size: 25px;
+    padding-top: 17px;
+    padding-left: 15px;
+  }
+
+  .blueChild {
+    background-color: #deebff;
+    color: #0065fc;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 0px;
+    font-size: 25px;
+    padding-top: 17px;
+    padding-left: 21px;
+  }
+
+  .blueHeart {
+    background-color: #deebff;
+    color: #0065fc;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 0px;
+    font-size: 25px;
+    padding-top: 17px;
+    padding-left: 18px;
+  }
+
+  .blueDog {
+    background-color: #deebff;
+    color: #0065fc;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 0px;
+    font-size: 25px;
+    padding-top: 14px;
+    padding-left: 16px;
+  }
+
+  .infoCircle {
+    color: #0065fc;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #deebff;
+    margin-right: 10px;
+    border-radius: 15px;
+    background-color: white;
+    padding-top: 3px;
+    padding-left: 7px;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  .greyMap {
+    background-color: #f1f4f4;
+    height: 60px;
+    border-radius: 18px 0 0 18px;
+    font-size: 22px;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .blueSearch {
+    background-color: #0065fc;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    padding-top: 19px;
+    padding-left: 18px;
+    font-size: 22px;
+    margin-right: 40px;
+  }
+
+  /*Icons syntaxe - END*/
+
+  /*Header syntaxe - START*/
+
+  #flexHeader {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-top: 27px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .logoBooki {
+    width: 130px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #flexNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 110%;
+  }
+
+  .flexLink {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .linkPage {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #0065fc;
+  }
+
+  .linkPage2 {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #f2f2f2;
+  }
+
+  .colorLink {
+    color: #414141;
+    font-size: 20px;
+  }
+
+  /*Header syntaxe - END*/
+
+  /*Formulaire syntaxe - START*/
+
+  input[type="submit"] {
+    width: 120px;
+    height: 60px;
+    color: white;
+    background-color: #0065fc;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    font-size: 15px;
+    padding-left: 0px;
+    display: none;
+  }
+
+  input[type="search"] {
+    width: 220px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+    background-color: white;
+    border: none;
+    color: black;
+    font: bold;
+  }
+
+  form[method="post"] {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    width: 100%;
+    border: none;
+  }
+
+  input::placeholder {
+    color: black;
+    font: bold;
+    font-size: 20px;
+    border: none;
+  }
+
+  .formPlacement {
+    margin-left: 100px;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /*Formulaire syntaxe - END*/
+
+  /*Filters syntaxe - START*/
+
+  .flexFilters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+  }
+
+  .filterSpace {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+    margin: 10px;
+    border-top: 2px solid #d6d2d2;
+    border-bottom: 2px solid #d6d2d2;
+    border-right: 2px solid #d6d2d2;
+    border-left: 0px solid #d6d2d2;
+    border-radius: 30px;
+    height: 60px;
+  }
+
+  .filterSpace:hover {
+    background-color: #deebff;
+    box-shadow: 1px 1px 7px #b9b5b5;
+    height: 65px;
+  }
+
+  .spacing {
+    padding-right: 20px;
+    padding-left: 10px;
+    color: black;
+  }
+
+  .paddingTop {
+    padding-top: 30px;
+  }
+
+  /*Filters syntaxe - END*/
+
+  /*Informations syntaxe - START*/
+
+  .flexInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    font-size: 130%;
+  }
+
+  /*Informations syntaxe - END*/
+
+  /*Accomodations syntaxe - START*/
+
+  #accommodations {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 20px;
+    padding: 0px;
+    width: 100%;
+    background-color: white;
+  }
+
+  #classicHosting {
+    background-color: white;
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+  .rowHosting {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 10px;
+  }
+
+  .boxHosting {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: flex-start;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 330px;
+    height: 200px;
+    color: black;
+  }
+
+  .boxPicture {
+    width: 100%;
+    height: 110px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 21px 21px 0 0;
+    object-fit: cover;
+  }
+
+  .textHosting {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding-left: 0px;
+  }
+
+  .textPrice {
+    font-size: 12px;
+    padding-left: 7px;
+  }
+
+  .rating {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    padding-left: 7px;
+    padding-top: 7px;
+  }
+
+  /*###########################################################################*/
+
+  #famousHosting {
+    background-color: #f2f2f2;
+    padding: 0px;
+    border-radius: 0px;
+    height: 100%;
+    width: 106%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: center;
+  }
+
+  #famousTitle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-left: 0px;
+    padding-left: 25px;
+    padding-right: 15px;
+    width: 100%;
+  }
+
+  .boxFamous {
+    background-color: white;
+    width: 330px;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    border-radius: 15px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  .famousPicture {
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+    width: 100px;
+    border-radius: 12px 0 0 12px;
+    object-fit: cover;
+  }
+
+  .textFamous {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+
+  .tabletPlacement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0px;
+  }
+
+  /*Accomodations syntaxe - END*/
+
+  /*Activity syntaxe - START*/
+
+  #activity {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  #activityOrientation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .rowActivity {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    width: 100%;
+  }
+
+  .boxActivity {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: flex-start;
+    border-radius: 15px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 315px;
+    height: 160px;
+    color: black;
+  }
+
+  .resizeBoxActivity {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: flex-start;
+    border-radius: 15px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 315px;
+    height: 340px;
+    color: black;
+  }
+
+  .regularPictureSize {
+    width: 100%;
+    height: 120px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+  }
+
+  .mediumPictureSize {
+    width: 100%;
+    height: 120px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+  }
+
+  .smallPictureSize {
+    width: 100%;
+    height: 120px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .mediumBoxActivity {
+    background-color: white;
+    width: 100%;
+    height: 160px;
+    border-radius: 15px;
+    color: black;
+  }
+
+  .smallBoxActivity {
+    background-color: white;
+    width: 100%;
+    height: 160px;
+    border-radius: 15px;
+    color: black;
+  }
+
+  .rowReverse {
+    flex-direction: column;
+  }
+
+  .columnReverse {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .padding {
+    padding-bottom: 15px;
+  }
+
+  /*Activity syntaxe - END*/
+
+  /*Footer syntaxe - START*/
+  footer {
+    background-color: #f2f2f2;
+    height: 100%;
+    width: 106%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+  }
+
+  .footerBox {
+    width: 300px;
+    height: 160px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .footerPadding {
+    padding-top: 10px;
+    font-size: 13px;
+  }
+
+  /*Footer syntaxe - END*/
+}
+
+/*Bonjour Gael,
+Si le code que t'as montré Marion ne fonctionne pas chez toi et n'affiche que  l'image indiquée dans <img src="">, cela peut venir du fait que le chemin d'accès vers les images que tu as mis dans <source srcset=""> n'est pas bon (c'est ce qui m'était arrivé).
+En effet, un navigateur qui ne trouve pas l'image mise dans <source srcset> se contentera d'afficher l'image par défaut,  donc l'image <img> qu'il y a dans la balise <picture>, sans forcément renvoyer une erreur.
+
+Le min-width est tout à fait possible à utiliser dans media="" mais il faut bien penser à les indiquer dans le bon ordre (dans le code donné en exemple, je pense qu'il faudrait donc inverser l'ordre des 2 <source srcset>). Le code étant lu en cascade, le navigateur le lira ainsi : si la résolution est au minimum de 768px, je met cette image. Puis il lira ensuite : si la résolution est au minimum de 992px, je mettrai cette image. Donc si la résolution est comprise entre 768 et 991px, il affichera bien l'image <source srcset> qui est indiquée avec un min-width de 768px) puisque la condition pour le min-width 992px n'est pas remplie.
+
+C'est une bonne idée que tu as de tester avec des images différentes pour bien visualiser le fonctionnement car ce n'est pas évident de voir si cela fonctionne bien.
+
+Pour ce qui est des différentes tailles d'images données pour le P2, il n'est bien évidemment pas nécessaire de toutes les utiliser. Elles sont données pour pouvoir évaluer notre capacité à choisir la résolution d'image adéquate pour l'optimisation du chargement de notre page.
+L'utilisation de la balise <picture> avec <source srcset> est cependant un petit + qui peut être apprécié par l'évaluateur si son utilisation est cohérente (dans mon souvenir, je ne l'avais utilisé que pour 2 images)
+
+En espérant avoir un peu aidée, bon courage à tous/tes 
+*/
